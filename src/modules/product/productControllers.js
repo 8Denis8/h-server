@@ -1,7 +1,7 @@
 export const productLoadAll = (req, res) => {
   const product = {
-    title: 'Box 456',
-    price: 789,
+    title: 'X BOX',
+    price: 500,
   };
 
   res.status(200).json(product);
@@ -11,8 +11,8 @@ export async function productCreate(req, res) {
   console.log(req.body);
 
   const product = {
-    title: 'Box 456',
-    price: 709,
+    title: 'X BOX ONE',
+    price: 500,
     id: req.body.id,
   };
 

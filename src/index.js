@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import productRouter from './modules/product/productRoutes';
+import listRoutes from './modules/list/listRoutes';
 import message from './modules/messages/messages';
 
 const app = express();
@@ -29,6 +30,7 @@ app.use((req, res, next) => { // eslint-disable-line consistent-return
 
 // ===== ROUTING =====
 app.use('/product', productRouter);
+app.use('/todo', listRoutes);
 
 // ===== ERROR HANDLING =====
 app.use((req, res, next) => res.status(404).json(message.error('API not found'))); // eslint-disable-line no-unused-vars
